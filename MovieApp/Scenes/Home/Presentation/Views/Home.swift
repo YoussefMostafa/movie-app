@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Home: View {
 
+//    @ObservedObject private var viewModel: Home
     
     var body: some View {
         NavigationStack {
@@ -23,6 +24,10 @@ struct Home: View {
 //            }
             .navigationTitle("Inbox")
         }.task {
+            async {
+                let data: [MovieEntity]? = try await MoviesRepository().fetchHome(page: 1)
+                
+            }
             
         }
     }

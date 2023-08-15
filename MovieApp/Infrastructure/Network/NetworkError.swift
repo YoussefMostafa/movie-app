@@ -10,6 +10,7 @@ import Foundation
 enum NetworkError: Error {
     case timeOut
     case connectionFailure
-    case noData
+    case invalidData
     case invalidUrl
+    case invalidResponse(statusCode: Int?)
 }

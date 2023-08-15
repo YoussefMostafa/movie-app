@@ -8,5 +8,5 @@
 import Foundation
 
 protocol APIManagerInterface {
-    
+    func call<T: Decodable>(requestModel: APIRequestModelInterface) async throws -> T
 }

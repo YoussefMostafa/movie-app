@@ -3,4 +3,54 @@
    uuid = "68E09D13-21C9-4CC5-826E-7B002439F46F"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8FA9743D-481A-4D62-B421-C36B2555B656"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieApp/DataLayer/Repositories/MoviesRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "fetchHome(page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8FA9743D-481A-4D62-B421-C36B2555B656 - 7063ebe4b4087a29"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for MovieApp.MoviesRepository.fetchHome(page: Swift.Int) async throws -&gt; Swift.Optional&lt;Swift.Array&lt;MovieApp.MovieEntity&gt;&gt;"
+                  moduleName = "MovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefmostafa/Desktop/MovieApp/MovieApp/DataLayer/Repositories/MoviesRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "8FA9743D-481A-4D62-B421-C36B2555B656 - 7063ebe4b4087a29"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for MovieApp.MoviesRepository.fetchHome(page: Swift.Int) async throws -&gt; Swift.Optional&lt;Swift.Array&lt;MovieApp.MovieEntity&gt;&gt;"
+                  moduleName = "MovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/youssefmostafa/Desktop/MovieApp/MovieApp/DataLayer/Repositories/MoviesRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

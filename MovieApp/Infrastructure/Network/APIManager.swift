@@ -13,37 +13,27 @@ class APIManager: APIManagerInterface {
     
     private init() {}
     
+    private let validStatus = 200...299
     private lazy var decoder: JSONDecoder = {
         let aDecoder = JSONDecoder()
         aDecoder.keyDecodingStrategy = .convertFromSnakeCase
         return aDecoder
     }()
     
-    func call<T: Decodable>(requestModel: APIRequestModelInterface, completion: @escaping (Result<T, NetworkError>) -> Void) {
-        guard let url = URL(string: requestModel.url) else {
-            completion(.failure(.invalidUrl))
-            return
-        }
+    func call<T: Decodable>(requestModel: APIRequestModelInterface) async throws -> T {
+        guard let url = URL(string: requestModel.url) else { throw NetworkError.invalidUrl }
         let urlRequest = createURLReqeust(requestModel: requestModel, url: url)
-        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            print(response)
-            if error == nil {
-                if let data = data {
-                    if let decodables = try? self.decoder.decode(T.self, from: data) {
-                        completion(.success(decodables))
-                    }
-                } else {
-                    completion(.failure(.noData))
-                }
-            } else {
-                completion(.failure(.connectionFailure))
-            }
-            
+        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        guard let response = response as? HTTPURLResponse, validStatus.contains(response.statusCode) else {
+            throw NetworkError.invalidResponse(statusCode: (response as? HTTPURLResponse)?.statusCode)
         }
-        task.resume()
+        do {
+            return try decoder.decode(T.self, from: data)
+        } catch {
+            throw NetworkError.invalidData
+        }
     }
 }
-
 
 extension APIManager {
     private func createURLReqeust(requestModel: APIRequestModelInterface, url: URL) -> URLRequest {
