@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct Home: View {
+
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+//            List(messages) { message in
+//                VStack(alignment: .leading) {
+//                    Text(message.from)
+//                        .font(.headline)
+//                    Text(message.text)
+//                }
+                
+                Text("x")
+//            }
+            .navigationTitle("Inbox")
+        }.task {
+            
+        }
     }
 }
 

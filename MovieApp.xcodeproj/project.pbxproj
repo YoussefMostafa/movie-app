@@ -19,6 +19,9 @@
 		D84980D62A883223003DFB7A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84980D52A883223003DFB7A /* Home.swift */; };
 		D84980D82A883724003DFB7A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84980D72A883724003DFB7A /* NetworkError.swift */; };
 		D84980DA2A8839F7003DFB7A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84980D92A8839F7003DFB7A /* HTTPMethod.swift */; };
+		D84980DC2A8AF64E003DFB7A /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84980DB2A8AF64E003DFB7A /* MovieEntity.swift */; };
+		D84980DF2A8AF7FA003DFB7A /* HomeRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84980DE2A8AF7FA003DFB7A /* HomeRequestModel.swift */; };
+		D84980E12A8B001A003DFB7A /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84980E02A8B001A003DFB7A /* HomeEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		D84980D52A883223003DFB7A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		D84980D72A883724003DFB7A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		D84980D92A8839F7003DFB7A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		D84980DB2A8AF64E003DFB7A /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
+		D84980DE2A8AF7FA003DFB7A /* HomeRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRequestModel.swift; sourceTree = "<group>"; };
+		D84980E02A8B001A003DFB7A /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,7 @@
 		D84980BE2A882D08003DFB7A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				D84980DD2A8AF7ED003DFB7A /* Models */,
 				D84980C42A882DC0003DFB7A /* Repositories */,
 				D84980C32A882DA3003DFB7A /* Entities */,
 				D84980C22A882D43003DFB7A /* Interfaces */,
@@ -202,6 +209,8 @@
 		D84980C32A882DA3003DFB7A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D84980DB2A8AF64E003DFB7A /* MovieEntity.swift */,
+				D84980E02A8B001A003DFB7A /* HomeEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -254,6 +263,14 @@
 				D84980BC2A882CF9003DFB7A /* Home */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D84980DD2A8AF7ED003DFB7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D84980DE2A8AF7FA003DFB7A /* HomeRequestModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +404,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D84980CF2A882FDA003DFB7A /* APIRequestModelInterface.swift in Sources */,
+				D84980DF2A8AF7FA003DFB7A /* HomeRequestModel.swift in Sources */,
+				D84980DC2A8AF64E003DFB7A /* MovieEntity.swift in Sources */,
+				D84980E12A8B001A003DFB7A /* HomeEntity.swift in Sources */,
 				D84980CB2A882FB6003DFB7A /* APIManager.swift in Sources */,
 				D84980DA2A8839F7003DFB7A /* HTTPMethod.swift in Sources */,
 				D84980D62A883223003DFB7A /* Home.swift in Sources */,
