@@ -8,6 +8,6 @@
 import Foundation
 
 protocol HomePresenterInterface {
-    func didFetchHome(with movies: [MovieEntity]?)
-    func didFetchHome(with error: NetworkError?)
+    func didFetchHome(with movies: [MovieDomainModel]?)
+    func didFailFetchHome(with error: Error?)
 }

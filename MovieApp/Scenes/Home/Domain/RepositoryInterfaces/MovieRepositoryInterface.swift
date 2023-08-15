@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MovieRepositoryInterface {
-    func fetchHome(page: Int) async throws -> [MovieEntity]?
+    func fetchHome(page: Int) async throws -> [MovieDomainModel]?
 }

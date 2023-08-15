@@ -25,7 +25,7 @@ struct Home: View {
             .navigationTitle("Inbox")
         }.task {
             async {
-                let data: [MovieEntity]? = try await MoviesRepository().fetchHome(page: 1)
+                let data: [MovieDomainModel]? = try await MoviesRepository().fetchHome(page: 1)
                 
             }
             

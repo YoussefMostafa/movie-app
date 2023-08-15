@@ -8,6 +8,6 @@
 import Foundation
 
 protocol HomeUseCaseInterface {
-    func fetchHome(page: Int)
+    func fetchHome(page: Int) async
 }
 
