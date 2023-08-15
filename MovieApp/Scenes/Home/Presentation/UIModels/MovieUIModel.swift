@@ -8,8 +8,17 @@
 import Foundation
 
 struct MovieUIModel {
+    let backdropPath: String?
+    let originalTitle: String?
+    let overview: String?
+    let posterPath: String?
+    let title: String?
     
-    init(entity: MovieEntity) {
-        
+    init(domainModel: MovieDomainModel) {
+        backdropPath = domainModel.backdropPath
+        originalTitle = domainModel.originalTitle
+        overview = domainModel.overview
+        posterPath = domainModel.posterPath
+        title = domainModel.title
     }
 }

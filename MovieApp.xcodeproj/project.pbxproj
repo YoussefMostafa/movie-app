@@ -30,7 +30,6 @@
 		D84980F02A8B058C003DFB7A /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84980EF2A8B058C003DFB7A /* MoviesRepository.swift */; };
 		D84980F22A8B4162003DFB7A /* MovieRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84980F12A8B4162003DFB7A /* MovieRepositoryInterface.swift */; };
 		D84980F52A8B439E003DFB7A /* MovieDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84980F42A8B439E003DFB7A /* MovieDomainModel.swift */; };
-		D84980F82A8B45B4003DFB7A /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84980F72A8B45B4003DFB7A /* HomePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +77,6 @@
 		D84980EF2A8B058C003DFB7A /* MoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
 		D84980F12A8B4162003DFB7A /* MovieRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepositoryInterface.swift; sourceTree = "<group>"; };
 		D84980F42A8B439E003DFB7A /* MovieDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDomainModel.swift; sourceTree = "<group>"; };
-		D84980F72A8B45B4003DFB7A /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +178,6 @@
 				D84980E42A8B034B003DFB7A /* ViewModels */,
 				D84980C02A882D2C003DFB7A /* Views */,
 				D84980BF2A882D27003DFB7A /* UIModels */,
-				D84980F72A8B45B4003DFB7A /* HomePresenter.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -452,7 +449,6 @@
 				D84980D62A883223003DFB7A /* Home.swift in Sources */,
 				D84980D82A883724003DFB7A /* NetworkError.swift in Sources */,
 				D84980C82A882F90003DFB7A /* APIManagerInterface.swift in Sources */,
-				D84980F82A8B45B4003DFB7A /* HomePresenter.swift in Sources */,
 				D84980F52A8B439E003DFB7A /* MovieDomainModel.swift in Sources */,
 				D84980EE2A8B04E1003DFB7A /* HomePresenterInterface.swift in Sources */,
 				D84980922A882B46003DFB7A /* MovieApp.swift in Sources */,
