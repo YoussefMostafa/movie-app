@@ -10,29 +10,28 @@ import Foundation
 class HomeViewModel: ObservableObject {
     
     private let useCase: HomeUseCaseInterface
-    var page: Int = 1
-    @Published var movies: [MovieUIModel]?
+    private(set) var page: Int = 0
+    @Published var movies: [MovieUIModel] = []
     @Published var isError: Bool = false
     
-    init(useCase: HomeUseCase) {
+    init(useCase: HomeUseCaseInterface) {
         self.useCase = useCase
     }
     
-    func fetchMovies(page: Int) {
-        self.page = page
+    func fetchMovies() {
+        page += 1
         Task.init {
-            useCase.fetchHome(page:)
+            await useCase.fetchHome(page: page)
         }
     }
 }
 
 extension HomeViewModel: HomePresenterInterface {
     func didFetchHome(with movies: [MovieDomainModel]?) {
-        if self.movies == nil {
-            self.movies = []
-        }
         if let moviesUIModels = movies?.map({ MovieUIModel(domainModel: $0) }) {
-            self.movies?.append(contentsOf: moviesUIModels)
+            DispatchQueue.main.async {
+                self.movies.append(contentsOf: moviesUIModels)
+            }
         }
     }
     

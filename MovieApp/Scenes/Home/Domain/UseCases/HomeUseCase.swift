@@ -13,6 +13,7 @@ class HomeUseCase: HomeUseCaseInterface {
     var moviesRepository: MoviesRepository?
     
     func fetchHome(page: Int) async {
+        
         do {
             let movies = try await moviesRepository?.fetchHome(page: page)
             presenter?.didFetchHome(with: movies)

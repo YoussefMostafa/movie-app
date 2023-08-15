@@ -8,6 +8,7 @@
 import Foundation
 
 struct MovieDomainModel {
+    let id: Int?
     let backdropPath: String?
     let originalTitle: String?
     let overview: String?
@@ -20,5 +21,6 @@ struct MovieDomainModel {
         overview = entity.overview
         posterPath = entity.posterPath
         title = entity.title
+        id = entity.id
     }
 }

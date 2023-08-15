@@ -13,4 +13,5 @@ struct MovieEntity: Decodable {
     let overview: String?
     let posterPath: String?
     let title: String?
+    let id: Int?
 }

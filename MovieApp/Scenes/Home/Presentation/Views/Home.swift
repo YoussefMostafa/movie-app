@@ -9,26 +9,26 @@ import SwiftUI
 
 struct Home: View {
 
-//    @ObservedObject private var viewModel: Home
+    @ObservedObject private var viewModel = {
+        let useCase = HomeUseCase()
+        useCase.moviesRepository = MoviesRepository()
+        let viewModel = HomeViewModel(useCase: useCase)
+        useCase.presenter = viewModel
+        return viewModel
+    }()
     
     var body: some View {
         NavigationStack {
-//            List(messages) { message in
-//                VStack(alignment: .leading) {
-//                    Text(message.from)
-//                        .font(.headline)
-//                    Text(message.text)
-//                }
-                
-                Text("x")
-//            }
+            List(viewModel.movies) { movie in
+                VStack(alignment: .leading) {
+                    Text(movie.title ?? "")
+                        .font(.headline)
+                    Text(movie.overview ?? "")
+                }
+            }
             .navigationTitle("Inbox")
         }.task {
-            async {
-                let data: [MovieDomainModel]? = try await MoviesRepository().fetchHome(page: 1)
-                
-            }
-            
+            viewModel.fetchMovies()
         }
     }
 }
