@@ -30,6 +30,7 @@
 		D84980F02A8B058C003DFB7A /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84980EF2A8B058C003DFB7A /* MoviesRepository.swift */; };
 		D84980F22A8B4162003DFB7A /* MovieRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84980F12A8B4162003DFB7A /* MovieRepositoryInterface.swift */; };
 		D84980F52A8B439E003DFB7A /* MovieDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84980F42A8B439E003DFB7A /* MovieDomainModel.swift */; };
+		D84980FD2A8BCED3003DFB7A /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84980FC2A8BCED3003DFB7A /* ViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		D84980EF2A8B058C003DFB7A /* MoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
 		D84980F12A8B4162003DFB7A /* MovieRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepositoryInterface.swift; sourceTree = "<group>"; };
 		D84980F42A8B439E003DFB7A /* MovieDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDomainModel.swift; sourceTree = "<group>"; };
+		D84980FC2A8BCED3003DFB7A /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		D84981032A8BF346003DFB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +130,10 @@
 		D84980902A882B46003DFB7A /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				D84981032A8BF346003DFB7A /* Info.plist */,
 				D84980912A882B46003DFB7A /* MovieApp.swift */,
-				D84980D42A883150003DFB7A /* Scenes */,
+				D84980BE2A882D08003DFB7A /* Domain */,
+				D84980BD2A882D01003DFB7A /* Presentation */,
 				D84980D32A88313E003DFB7A /* Infrastructure */,
 				D84980C62A882EFA003DFB7A /* DataLayer */,
 				D84980952A882B48003DFB7A /* Assets.xcassets */,
@@ -163,15 +168,6 @@
 			path = MovieAppUITests;
 			sourceTree = "<group>";
 		};
-		D84980BC2A882CF9003DFB7A /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				D84980BE2A882D08003DFB7A /* Domain */,
-				D84980BD2A882D01003DFB7A /* Presentation */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		D84980BD2A882D01003DFB7A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				D84980E22A8B0322003DFB7A /* MovieUIModel.swift */,
+				D84980FC2A8BCED3003DFB7A /* ViewState.swift */,
 			);
 			path = UIModels;
 			sourceTree = "<group>";
@@ -272,14 +269,6 @@
 			path = Infrastructure;
 			sourceTree = "<group>";
 		};
-		D84980D42A883150003DFB7A /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				D84980BC2A882CF9003DFB7A /* Home */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
 		D84980DD2A8AF7ED003DFB7A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +310,8 @@
 			dependencies = (
 			);
 			name = MovieApp;
+			packageProductDependencies = (
+			);
 			productName = MovieApp;
 			productReference = D849808E2A882B46003DFB7A /* MovieApp.app */;
 			productType = "com.apple.product-type.application";
@@ -393,6 +384,8 @@
 				Base,
 			);
 			mainGroup = D84980852A882B46003DFB7A;
+			packageReferences = (
+			);
 			productRefGroup = D849808F2A882B46003DFB7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -437,6 +430,7 @@
 			files = (
 				D84980CF2A882FDA003DFB7A /* APIRequestModelInterface.swift in Sources */,
 				D84980DF2A8AF7FA003DFB7A /* HomeRequestModel.swift in Sources */,
+				D84980FD2A8BCED3003DFB7A /* ViewState.swift in Sources */,
 				D84980DC2A8AF64E003DFB7A /* MovieEntity.swift in Sources */,
 				D84980E12A8B001A003DFB7A /* HomeEntity.swift in Sources */,
 				D84980F02A8B058C003DFB7A /* MoviesRepository.swift in Sources */,
@@ -611,6 +605,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MovieApp/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -649,6 +644,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MovieApp/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

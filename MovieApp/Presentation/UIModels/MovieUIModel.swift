@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieUIModel: Identifiable {
+class MovieUIModel: Identifiable, ObservableObject {
     var id: UUID = UUID()
     let backdropPath: String?
     let originalTitle: String?

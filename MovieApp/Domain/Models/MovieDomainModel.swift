@@ -16,10 +16,10 @@ struct MovieDomainModel {
     let title: String?
     
     init(entity: MovieEntity) {
-        backdropPath = entity.backdropPath
+        backdropPath = "http://image.tmdb.org/t/p/w500\(entity.backdropPath ?? "")"
         originalTitle = entity.originalTitle
         overview = entity.overview
-        posterPath = entity.posterPath
+        posterPath = "http://image.tmdb.org/t/p/w500\(entity.posterPath ?? "")"
         title = entity.title
         id = entity.id
     }
